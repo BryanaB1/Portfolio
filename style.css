@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box
+}
+
+body{
+    background: #cfcfcf;
+    color: #000000;
+}
+
+/* background photo*/
+#header{
+    width: 100%;
+    height: 170vh;
+    background-image: url(images/p1.JPG);
+    background-size: cover;
+    background-position: center;
+
+}
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 140px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+/* changes the color for the links in the website*/
+nav ul li a{
+    color: #5b0c0c;
+    text-decoration: none; /*removes the underline from link*/
+    font-size: 18px;
+    position: relative;
+}
+
+/*changes the position and color of the lines for the links*/
+nav ul li a::after{
+    content: '';
+    width: 0; /*hides the line*/
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+/*line will reappear when the cursor hovers over each individual link*/
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/*moves the location of my welcome/ introduction*/
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+/*------------------about----------------------*/
+#about {
+    padding: 80px 0;
+    color: #5b0c0c;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%; /*the width will be 35%*/
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px; /*makes the corner of the image to be round*/
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 40px;
+    font-weight: 600;
+    color: #5b0c0c;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color:#000;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
