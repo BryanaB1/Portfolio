@@ -39,36 +39,53 @@
                 <p>This will include a short paragraph about me around 8 sentences or so about how I got into programming, my passions, my goals, things I have/will accomplish, etc. Will edit this later :).</p>
 
                 <div class="tab-titles">
-                    <p class="tab-links active-links">Skills</p>
-                    <p class="tab-links active-links">Experience</p>
-                    <p class="tab-links active-links">Education</p>
+                    <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
                 </div>
 
-                <div class="tab-contents"></div>
-                <ul>
-                    <li><span>Programming/Scripting Languages:</span><br> Python, C++, Java, Powershell</li>
-                    <li><span>Risk Management/Incident Response</span></li>
-                    <li><span>Controls and Frameworks</span></li>
-                    <li><span>Statistics</span></li>
-                    <li><span>Microsoft Office</span></li>
-                </ul>
-
-                <div class="tab-contents"></div>
-                <ul>
-                    <li><span>Experience 1:</span><br> Job Descrption</li>
-                    <li><span>Experience 2:</span><br> Job Description</li>
-                    <li><span>Experience 3:</span>,<br> Job Description</li>
-                </ul>
-
-                <div class="tab-contents"></div>
-                <ul>
-                    <li><span>Loyola University New Orleans: </span><br> BS Computer Science with Cybersecurity</li>
-                 
-                </ul>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming/Scripting Languages:</span><br> Python, C++, Java, Powershell</li>
+                        <li><span>Risk Management/Incident Response</span></li>
+                        <li><span>Controls and Frameworks</span></li>
+                        <li><span>Statistics</span></li>
+                        <li><span>Microsoft Office</span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Experience 1:</span><br> Job Descrption</li>
+                        <li><span>Experience 2:</span><br> Job Description</li>
+                        <li><span>Experience 3:</span>,<br> Job Description</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Loyola University New Orleans: </span><br> BS Computer Science with Cybersecurity</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    //created a function that should hide the details and underline that is underneath each tab link
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link"); //removes active class name 
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+    }
+
+</script>
 
 </body>
 </html>
